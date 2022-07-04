@@ -74,9 +74,9 @@ map("n", "s", "", opt)
 map("n", "sv", ":vsp<CR>", opt)
 map("n", "sh", ":sp<CR>", opt)
 -- 关闭当前
-map("n", "sc", "<C-w>c", opt)
+-- map("n", "sc", "<C-w>c", opt)
 -- 关闭其他
-map("n", "so", "<C-w>o", opt) -- close others
+-- map("n", "so", "<C-w>o", opt) -- close others
 -- alt + hjkl  窗口之间跳转
 map("n", "<A-h>", "<C-w>h", opt)
 map("n", "<A-j>", "<C-w>j", opt)
@@ -98,21 +98,21 @@ map("n", "sk", ":resize -10<CR>", opt)
 map("n", "<C-Down>", ":resize +2<CR>", opt)
 map("n", "<C-Up>", ":resize -2<CR>", opt)
 -- 相等比例
-map("n", "s=", "<C-w>=", opt)
+-- map("n", "s=", "<C-w>=", opt)
 
 -- Terminal相关
 map("n", "st", ":sp | terminal<CR>", opt)
 map("n", "stv", ":vsp | terminal<CR>", opt)
 -- Esc 回 Normal 模式
-map("t", "<Esc>", "<C-\\><C-n>", opt)
-map("t", "<A-h>", [[ <C-\><C-N><C-w>h ]], opt)
-map("t", "<A-j>", [[ <C-\><C-N><C-w>j ]], opt)
-map("t", "<A-k>", [[ <C-\><C-N><C-w>k ]], opt)
-map("t", "<A-l>", [[ <C-\><C-N><C-w>l ]], opt)
-map("t", "<leader>h", [[ <C-\><C-N><C-w>h ]], opt)
-map("t", "<leader>j", [[ <C-\><C-N><C-w>j ]], opt)
-map("t", "<leader>k", [[ <C-\><C-N><C-w>k ]], opt)
-map("t", "<leader>l", [[ <C-\><C-N><C-w>l ]], opt)
+-- map("t", "<Esc>", "<C-\\><C-n>", opt)
+-- map("t", "<A-h>", [[ <C-\><C-N><C-w>h ]], opt)
+-- map("t", "<A-j>", [[ <C-\><C-N><C-w>j ]], opt)
+-- map("t", "<A-k>", [[ <C-\><C-N><C-w>k ]], opt)
+-- map("t", "<A-l>", [[ <C-\><C-N><C-w>l ]], opt)
+-- map("t", "<leader>h", [[ <C-\><C-N><C-w>h ]], opt)
+-- map("t", "<leader>j", [[ <C-\><C-N><C-w>j ]], opt)
+-- map("t", "<leader>k", [[ <C-\><C-N><C-w>k ]], opt)
+-- map("t", "<leader>l", [[ <C-\><C-N><C-w>l ]], opt)
 --------------------------------------------------------------------
 -- 插件快捷键
 local pluginKeys = {}
@@ -123,44 +123,44 @@ map("n", "Z", ":foldopen<CR>", opt)
 
 -- nvim-tree
 map("n", "<A-m>", ":NvimTreeToggle<CR>", opt)
-map("n", "<leader>m", ":NvimTreeToggle<CR>", opt)
+map("n", "tt", ":NvimTreeToggle<CR>", opt)
 -- 列表快捷键
-pluginKeys.nvimTreeList = { -- 打开文件或文件夹
-  { key = { "o", "<2-LeftMouse>" }, action = "edit" },
-  { key = "<CR>", action = "system_open" },
-  -- v分屏打开文件
-  { key = "v", action = "vsplit" },
-  -- h分屏打开文件
-  { key = "h", action = "split" },
-  -- Ignore (node_modules)
-  { key = "i", action = "toggle_ignored" },
-  -- Hide (dotfiles)
-  { key = ".", action = "toggle_dotfiles" },
-  { key = "R", action = "refresh" },
-  -- 文件操作
-  { key = "a", action = "create" },
-  { key = "d", action = "remove" },
-  { key = "r", action = "rename" },
-  { key = "x", action = "cut" },
-  { key = "c", action = "copy" },
-  { key = "p", action = "paste" },
-  { key = "y", action = "copy_name" },
-  { key = "Y", action = "copy_path" },
-  { key = "gy", action = "copy_absolute_path" },
-  { key = "I", action = "toggle_file_info" },
-  { key = "n", action = "tabnew" },
-  -- 进入下一级
-  { key = { "]" }, action = "cd" },
-  -- 进入上一级
-  { key = { "[" }, action = "dir_up" },
-}
+-- pluginKeys.nvimTreeList = { -- 打开文件或文件夹
+--   { key = { "o", "<2-LeftMouse>" }, action = "edit" },
+--   { key = "<CR>", action = "system_open" },
+--   -- v分屏打开文件
+--   { key = "v", action = "vsplit" },
+--   -- h分屏打开文件
+--   { key = "h", action = "split" },
+--   -- Ignore (node_modules)
+--   { key = "i", action = "toggle_ignored" },
+--   -- Hide (dotfiles)
+--   { key = ".", action = "toggle_dotfiles" },
+--   { key = "R", action = "refresh" },
+--   -- 文件操作
+--   { key = "a", action = "create" },
+--   { key = "d", action = "remove" },
+--   { key = "r", action = "rename" },
+--   { key = "x", action = "cut" },
+--   { key = "c", action = "copy" },
+--   { key = "p", action = "paste" },
+--   { key = "y", action = "copy_name" },
+--   { key = "Y", action = "copy_path" },
+--   { key = "gy", action = "copy_absolute_path" },
+--   { key = "I", action = "toggle_file_info" },
+--   { key = "n", action = "tabnew" },
+--   -- 进入下一级
+--   { key = { "]" }, action = "cd" },
+--   -- 进入上一级
+--   { key = { "[" }, action = "dir_up" },
+-- }
 -- bufferline
 -- 左右Tab切换
-map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
-map("n", "<C-l>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<TAB>", ":BufferLineCyclePrev<CR>", opt)
+map("n", "<S-TAB>", ":BufferLineCycleNext<CR>", opt)
 -- "moll/vim-bbye" 关闭当前 buffer
 map("n", "<leader>bc", ":Bdelete!<CR>", opt)
-map("n", "<C-w>", ":Bdelete!<CR>", opt)
+-- map("n", "<C-w>", ":Bdelete!<CR>", opt)
 -- 关闭左/右侧标签页
 map("n", "<leader>bh", ":BufferLineCloseLeft<CR>", opt)
 map("n", "<leader>bl", ":BufferLineCloseRight<CR>", opt)
@@ -171,6 +171,7 @@ map("n", "<leader>bp", ":BufferLinePickClose<CR>", opt)
 
 -- Telescope
 map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+map("n", "<C-r>", ":Telescope buffers<CR>", opt)
 map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
 -- Telescope 列表中 插入模式快捷键
 pluginKeys.telescopeList = {
@@ -394,7 +395,7 @@ pluginKeys.mapToggleTerm = function(toggleterm)
   vim.keymap.set({ "n", "t" }, "<leader>ta", toggleterm.toggleA)
   vim.keymap.set({ "n", "t" }, "<leader>tb", toggleterm.toggleB)
   vim.keymap.set({ "n", "t" }, "<leader>tc", toggleterm.toggleC)
-  vim.keymap.set({ "n", "t" }, "<leader>tg", toggleterm.toggleG)
+  vim.keymap.set({ "n", "t" }, "<C-g>", toggleterm.toggleG)
 end
 
 -- gitsigns
